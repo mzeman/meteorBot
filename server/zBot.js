@@ -12,7 +12,7 @@ var ZBot = new function() {
 	this.handleMessage = function(from, to, message) {
 		Fiber(function(){	
 			var timestamp = (new Date()).getTime();
-			if(message.indexOf("addThought") > -1){
+			if(message.indexOf("addThought") == 0){
 				thoughtPieces = message.split("|");
 				if(thoughtPieces[1] && thoughtPieces[2])
 				{

@@ -9,7 +9,7 @@ Meteor.startup(function () {
     var data = [
       {
        trigger: "!!help",
-       phrase: "Use the addThought command"
+       phrase: "Follow meteorBot development @ https://github.com/mzeman/meteorBot - You can also add new thoughts with the addThought command: addThought|trigger(lowercase)|response"
       }
     ];
 
