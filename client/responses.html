@@ -5,6 +5,10 @@
 	<div class="mainPanel">
 		{{> responses}}
 	</div>
+  <div class="actionPanel">
+    {{> add_response}}  
+    {{> delete_response}}  
+  </div>
 </body>
 
 <template name="responses">
@@ -17,7 +21,20 @@
 </template>
 
 <template name="response">
-  <div id="response">
+  <div class="{{selected}}" id="response_{{this._id}}">
   	<span>{{trigger}} : {{phrase}}</span>
   </div>
+</template>
+
+<template name="delete_response">
+  <h3>Delete Selected Response</h3>
+</template>
+
+<template name="add_response">
+ <div id="addResponseContainer"> 
+  <input type="text" id="trigger">
+  <br />
+  <input type="text" id="phrase">
+  <a id="addResponse" href="#" class="addResponse">Add Response</a>
+</div>
 </template>
