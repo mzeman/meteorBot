@@ -1,0 +1,23 @@
+<head>
+	<title>Meteor Bot Config</title>
+</head>
+<body>
+	<div class="mainPanel">
+		{{> responses}}
+	</div>
+</body>
+
+<template name="responses">
+  <h3>Bot Responses</h3>
+  <div id="responses">
+    {{#each responses}}
+      {{> response}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="response">
+  <div id="response">
+  	<span>{{trigger}} : {{phrase}}</span>
+  </div>
+</template>
